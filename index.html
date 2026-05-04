@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das deutsche Alphabet — Germană A0.1 · Lecția 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#top" class="navbar-logo">ʚଓ Claudia Toth</a>
+        <ul class="navbar-menu">
+            <li><a href="#teorie" onclick="openSection(0)">Teorie</a></li>
+            <li><a href="#ex1" onclick="openSection(1)">Ex. 1</a></li>
+            <li><a href="#ex2" onclick="openSection(2)">Ex. 2</a></li>
+            <li><a href="#ex3" onclick="openSection(3)">Ex. 3</a></li>
+            <li><a href="#ex4" onclick="openSection(4)">Ex. 4</a></li>
+            <li><a href="#ex5" onclick="openSection(5)">Ex. 5</a></li>
+            <li><a href="#flashcards" onclick="openSection(6)">📇 Flashcards</a></li>
+            <li><a href="#final-test" onclick="openSection(7)">🎯 Test Final</a></li>
+            <li><a href="alphabet.pdf" download>📄 PDF</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="top">
+        <div class="header">
+            <h1>ʚଓ Das deutsche Alphabet</h1>
+            <p class="subtitle">Alfabetul german + introducere în regulile de citire · Nivel A0.1</p>
+            <p>Claudia Toth · Curs A0.1 — Lecția 1 din 7</p>
+        </div>
+
+        <div class="content">
+            <div class="section" id="teorie">
+                <div class="section-header" onclick="toggleMainSection(0)">
+                    <h3>ʚଓ TEORIE</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-0">
+                    <div id="theory-container"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex1">
+                <div class="section-header" onclick="toggleMainSection(1)">
+                    <h3>ʚଓ Übung 1: Alfabetul — completează literele lipsă</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-1">
+                    <div id="ex1-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(1)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(1)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-1"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex2">
+                <div class="section-header" onclick="toggleMainSection(2)">
+                    <h3>ʚଓ Übung 2: Cum se citește litera? — alege varianta corectă</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-2">
+                    <div id="ex2-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(2)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(2)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-2"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex3">
+                <div class="section-header" onclick="toggleMainSection(3)">
+                    <h3>ʚଓ Übung 3: Sonderzeichen — caractere speciale</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-3">
+                    <div id="ex3-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(3)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(3)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-3"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex4">
+                <div class="section-header" onclick="toggleMainSection(4)">
+                    <h3>ʚଓ Übung 4: Buchstabieren — scrie numele pe litere</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-4">
+                    <div id="ex4-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(4)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(4)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-4"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex5">
+                <div class="section-header" onclick="toggleMainSection(5)">
+                    <h3>ʚଓ Übung 5: Verbele „heißen" și „buchstabieren" — completează</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-5">
+                    <div id="ex5-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(5)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(5)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-5"></div>
+                </div>
+            </div>
+
+            <div class="section" id="flashcards">
+                <div class="section-header" onclick="toggleMainSection(6)">
+                    <h3>ʚଓ Flashcards - Învață literele prin repetiție</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-6">
+                    <div id="flashcards-container"></div>
+                </div>
+            </div>
+
+            <div class="section" id="final-test">
+                <div class="section-header" onclick="toggleMainSection(7)">
+                    <h3>ʚଓ 🎯 Test Final - Testează-ți cunoștințele!</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-7">
+                    <div id="final-test-container"></div>
+                </div>
+            </div>
+
+            <div class="theory-box" style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 1.3rem; font-weight: bold; color: #065f46;">🎉 Bravo! Ai terminat Lecția 1 din A0.1!</p>
+                <p>Acum cunoști <strong>alfabetul german complet</strong> + cele <strong>4 caractere speciale</strong> (ä, ö, ü, ß) și știi să spui un cuvânt <strong>pe litere</strong>.</p>
+                <p style="margin-top: 10px;">În <strong>Lecția 2</strong> vom intra în detalii despre vocala <strong>e</strong> și literele <strong>h, i, j, k, q</strong> — cu toate regulile lor de citire.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="theory.js"></script>
+    <script src="exercises.js"></script>
+    <script src="flashcards.js"></script>
+    <script src="final-test.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
