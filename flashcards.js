@@ -4,47 +4,78 @@
 // 26 litere + 4 Sonderzeichen + 2 verbe = 32 carduri
 // ============================================
 
+// Pronunția scrisă fonetic în germană (pentru ca TTS-ul să citească literele
+// ca pe cuvinte naturale, nu ca pe sunete trunchiate).
 const flashcardsData = [
     // ========== 26 litere ==========
-    { de: "A / a", ro: "se citește „a\" [a:]", speak: "a" },
-    { de: "B / b", ro: "se citește „be\" [be:]", speak: "be" },
-    { de: "C / c", ro: "se citește „țe\" [tse:]", speak: "ce" },
-    { de: "D / d", ro: "se citește „de\" [de:]", speak: "de" },
-    { de: "E / e", ro: "se citește „e\" [e:]", speak: "e" },
-    { de: "F / f", ro: "se citește „ef\" [ɛf]", speak: "ef" },
-    { de: "G / g", ro: "se citește „ghe\" [ge:]", speak: "ge" },
-    { de: "H / h", ro: "se citește „ha\" [ha:]", speak: "ha" },
-    { de: "I / i", ro: "se citește „i\" [i:]", speak: "i" },
-    { de: "J / j", ro: "se citește „iot\" [jɔt]", speak: "jot" },
-    { de: "K / k", ro: "se citește „ca\" [ka:]", speak: "ka" },
-    { de: "L / l", ro: "se citește „el\" [ɛl]", speak: "el" },
-    { de: "M / m", ro: "se citește „em\" [ɛm]", speak: "em" },
-    { de: "N / n", ro: "se citește „en\" [ɛn]", speak: "en" },
-    { de: "O / o", ro: "se citește „o\" [o:]", speak: "o" },
-    { de: "P / p", ro: "se citește „pe\" [pe:]", speak: "pe" },
-    { de: "Q / q", ro: "se citește „cu / ku\" [ku:]", speak: "ku" },
-    { de: "R / r", ro: "se citește „er\" (ușor nazal) [ɛʁ]", speak: "er" },
-    { de: "S / s", ro: "se citește „es\" [ɛs]", speak: "es" },
-    { de: "T / t", ro: "se citește „te\" [te:]", speak: "te" },
-    { de: "U / u", ro: "se citește „u\" [u:]", speak: "u" },
-    { de: "V / v", ro: "se citește „fau\" [faʊ]", speak: "vau" },
-    { de: "W / w", ro: "se citește „ve\" [ve:]", speak: "we" },
-    { de: "X / x", ro: "se citește „iks\" [iks]", speak: "iks" },
-    { de: "Y / y", ro: "se citește „ipsilon\" [ˈʏpsilɔn]", speak: "ypsilon" },
-    { de: "Z / z", ro: "se citește „țet\" [tsɛt]", speak: "zett" },
+    { de: "A / a", ro: "se citește „a\" [a:]", speak: "Ah" },
+    { de: "B / b", ro: "se citește „be\" [be:]", speak: "Beh" },
+    { de: "C / c", ro: "se citește „țe\" [tse:]", speak: "Zeh" },
+    { de: "D / d", ro: "se citește „de\" [de:]", speak: "Deh" },
+    { de: "E / e", ro: "se citește „e\" [e:]", speak: "Eh" },
+    { de: "F / f", ro: "se citește „ef\" [ɛf]", speak: "Eff" },
+    { de: "G / g", ro: "se citește „ghe\" [ge:]", speak: "Geh" },
+    { de: "H / h", ro: "se citește „ha\" [ha:]", speak: "Hah" },
+    { de: "I / i", ro: "se citește „i\" [i:]", speak: "Ih" },
+    { de: "J / j", ro: "se citește „iot\" [jɔt]", speak: "Jott" },
+    { de: "K / k", ro: "se citește „ca\" [ka:]", speak: "Kah" },
+    { de: "L / l", ro: "se citește „el\" [ɛl]", speak: "Ell" },
+    { de: "M / m", ro: "se citește „em\" [ɛm]", speak: "Emm" },
+    { de: "N / n", ro: "se citește „en\" [ɛn]", speak: "Enn" },
+    { de: "O / o", ro: "se citește „o\" [o:]", speak: "Oh" },
+    { de: "P / p", ro: "se citește „pe\" [pe:]", speak: "Peh" },
+    { de: "Q / q", ro: "se citește „cu / ku\" [ku:]", speak: "Kuh" },
+    { de: "R / r", ro: "se citește „er\" (ușor nazal) [ɛʁ]", speak: "Err" },
+    { de: "S / s", ro: "se citește „es\" [ɛs]", speak: "Ess" },
+    { de: "T / t", ro: "se citește „te\" [te:]", speak: "Teh" },
+    { de: "U / u", ro: "se citește „u\" [u:]", speak: "Uh" },
+    { de: "V / v", ro: "se citește „fau\" [faʊ]", speak: "Vau" },
+    { de: "W / w", ro: "se citește „ve\" [ve:]", speak: "Weh" },
+    { de: "X / x", ro: "se citește „iks\" [iks]", speak: "Iks" },
+    { de: "Y / y", ro: "se citește „ipsilon\" [ˈʏpsilɔn]", speak: "Ypsilon" },
+    { de: "Z / z", ro: "se citește „țet\" [tsɛt]", speak: "Zett" },
 
     // ========== 4 Sonderzeichen ==========
-    { de: "Ä / ä", ro: "a-umlaut [ɛ:] · ex: der Bär (ursul)", speak: "a Umlaut" },
-    { de: "Ö / ö", ro: "o-umlaut [ø:] · ex: schön (frumos)", speak: "o Umlaut" },
-    { de: "Ü / ü", ro: "u-umlaut [y:] · ex: die Tür (ușa)", speak: "u Umlaut" },
-    { de: "ß", ro: "Eszett (es-țet) · ex: die Straße (strada)", speak: "Eszett" },
+    { de: "Ä / ä", ro: "a-umlaut [ɛ:] · ex: der Bär (ursul)", speak: "A Umlaut, der Bär" },
+    { de: "Ö / ö", ro: "o-umlaut [ø:] · ex: schön (frumos)", speak: "O Umlaut, schön" },
+    { de: "Ü / ü", ro: "u-umlaut [y:] · ex: die Tür (ușa)", speak: "U Umlaut, die Tür" },
+    { de: "ß", ro: "Eszett (es-țet) · ex: die Straße (strada)", speak: "Eszett, die Straße" },
 
     // ========== 2 verbe ==========
-    { de: "heißen", ro: "a se numi · ich heiße, du heißt, er/sie heißt, wir heißen, ihr heißt, sie/Sie heißen", speak: "heißen" },
-    { de: "buchstabieren", ro: "a spune pe litere · ich buchstabiere, du buchstabierst, er buchstabiert, wir buchstabieren, ihr buchstabiert, sie/Sie buchstabieren", speak: "buchstabieren" }
+    { de: "heißen", ro: "a se numi · ich heiße, du heißt, er/sie heißt, wir heißen, ihr heißt, sie/Sie heißen", speak: "heißen, ich heiße, du heißt" },
+    { de: "buchstabieren", ro: "a spune pe litere · ich buchstabiere, du buchstabierst, er buchstabiert, wir buchstabieren, ihr buchstabiert, sie/Sie buchstabieren", speak: "buchstabieren, ich buchstabiere" }
 ];
 
 let currentCardIndex = 0;
+let preferredGermanVoice = null;
+
+// Detectează cea mai bună voce germană disponibilă în browser
+function pickGermanVoice() {
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices || voices.length === 0) return null;
+    // Prioritizează voci germane native cu calitate bună
+    const preferences = [
+        v => v.lang === 'de-DE' && /Anna|Hedda|Stefan|Markus|Katja|Conrad/i.test(v.name),
+        v => v.lang === 'de-DE' && /Google|Microsoft/i.test(v.name),
+        v => v.lang === 'de-DE',
+        v => v.lang && v.lang.startsWith('de'),
+    ];
+    for (const pref of preferences) {
+        const found = voices.find(pref);
+        if (found) return found;
+    }
+    return null;
+}
+
+// Așteaptă încărcarea vocilor (în multe browsere lista vine asincron)
+function initVoices() {
+    preferredGermanVoice = pickGermanVoice();
+    if (!preferredGermanVoice && window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = () => {
+            preferredGermanVoice = pickGermanVoice();
+        };
+    }
+}
 
 function buildFlashcards() {
     const container = document.getElementById('flashcards-container');
@@ -52,7 +83,8 @@ function buildFlashcards() {
     container.innerHTML = `
         <div class="exercise-instruction">
             <strong>📇 ${flashcardsData.length} carduri:</strong> 26 litere + 4 caractere speciale (ä, ö, ü, ß) + 2 verbe (heißen, buchstabieren).<br>
-            Click pe card pentru a vedea pronunția. Click pe 🔊 pentru auzi pronunția germană automată.
+            Click pe card pentru a vedea pronunția în română. Click pe 🔊 pentru a auzi pronunția germană automată.<br>
+            <small style="color:#6b7280;">💡 Pentru cea mai bună calitate audio, folosește Chrome sau Edge (au voci germane native). Dacă vocea sună metalic, instalează din Setări Windows: Time &amp; Language → Speech → Add voices → German (Germany).</small>
         </div>
         <div class="flashcard-counter" id="flashcard-counter">Card 1 / ${flashcardsData.length}</div>
         <div class="flashcard" id="flashcard" onclick="flipCard()">
@@ -113,9 +145,14 @@ function playFlashcardAudio(event) {
     const text = card.speak || card.de;
     if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
+        // Re-pick voice in case voices loaded after init
+        if (!preferredGermanVoice) preferredGermanVoice = pickGermanVoice();
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'de-DE';
-        utterance.rate = 0.8;
+        utterance.rate = 0.7;   // mai lent ca să se audă clar
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        if (preferredGermanVoice) utterance.voice = preferredGermanVoice;
         window.speechSynthesis.speak(utterance);
     } else {
         alert('Browser-ul tău nu suportă Text-to-Speech. Folosește Chrome, Edge sau Safari.');
@@ -123,5 +160,6 @@ function playFlashcardAudio(event) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    initVoices();
     buildFlashcards();
 });
