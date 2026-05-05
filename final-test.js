@@ -19,7 +19,7 @@ const finalTestData = [
     { type: 'multiple', category: '✨ Sonderzeichen + reguli', question: 'Câte litere are alfabetul german (fără caracterele speciale)?', options: ['24', '26', '28', '30'], correct: '26', explanation: 'Alfabetul german are 26 de litere (A-Z), exact ca cel latin. ä, ö, ü și ß sunt caractere speciale separate.' },
 
     // 3x buchstabieren (nume → litere despărțite cu cratimă)
-    { type: 'spell', category: '🗣️ Buchstabieren', question: 'Buchstabiere numele:', word: 'Anna', accept: ['a-n-n-a', 'a n n a', 'anna'], correct: 'A-N-N-A', explanation: 'Anna se buchstabiază: A — N — N — A (litere duble se spun de două ori).' },
+    { type: 'spell', category: '🗣️ Buchstabieren', question: 'Buchstabiere numele:', word: 'Anna', accept: ['a-n-n-a', 'a n n a', 'anna'], correct: 'A-N-N-A', explanation: 'Anna se spune pe litere: A — N — N — A (literele duble se rostesc de două ori).' },
     { type: 'spell', category: '🗣️ Buchstabieren', question: 'Buchstabiere numele:', word: 'Klaus', accept: ['k-l-a-u-s', 'k l a u s', 'klaus'], correct: 'K-L-A-U-S', explanation: 'Klaus = K — L — A — U — S.' },
     { type: 'spell', category: '🗣️ Buchstabieren', question: 'Buchstabiere numele:', word: 'Müller', accept: ['m-ü-l-l-e-r', 'm-ue-l-l-e-r', 'm ü l l e r', 'm ue l l e r', 'müller', 'mueller'], correct: 'M-Ü-L-L-E-R', explanation: 'Müller = M — Ü (u-umlaut) — L — L — E — R. Poți scrie și „ue" în loc de „ü".' },
 

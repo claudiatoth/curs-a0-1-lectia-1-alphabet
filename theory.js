@@ -196,7 +196,7 @@ const theoryHTML = `
             <div class="theory-box">
                 <h4>🎯 3 exemple practice (citește cu voce tare)</h4>
                 <table class="theory-table">
-                    <thead><tr><th>Numele</th><th>Cum îl buchstabiezi</th></tr></thead>
+                    <thead><tr><th>Numele</th><th>Cum îl spui pe litere</th></tr></thead>
                     <tbody>
                         <tr>
                             <td><strong>Mihai</strong></td>
