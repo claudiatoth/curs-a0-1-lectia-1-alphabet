@@ -98,7 +98,7 @@ function showQuestion(index) {
     let questionHTML = '';
     if (q.type === 'multiple') {
         let optionsHTML = '';
-        q.options.forEach((opt, i) => { optionsHTML += `<div class="mc-option"><input type="radio" name="test-answer" value="${opt}" id="test-opt-${i}"><label for="test-opt-${i}">${opt}</label></div>`; });
+        q.options.forEach((opt, i) => { optionsHTML += `<div class="mc-option"><input type="radio" name="test-answer" value="${opt.replace(/"/g, '&quot;')}" id="test-opt-${i}"><label for="test-opt-${i}">${opt}</label></div>`; });
         questionHTML = `<div class="test-question"><div class="test-question-label">${q.question}</div><div class="mc-options test-mc">${optionsHTML}</div></div>`;
     } else if (q.type === 'luckentext') {
         questionHTML = `<div class="test-question"><div class="test-question-label">${q.question}</div><div class="test-question-content">${q.sentence}</div><small class="test-translation">💬 ${q.translation}</small><input type="text" id="test-answer" class="test-input" placeholder="Scrie răspunsul..."></div>`;
@@ -108,8 +108,9 @@ function showQuestion(index) {
     container.innerHTML = questionHTML;
     if (userAnswers[index] !== undefined) {
         if (q.type === 'multiple') {
-            const radio = document.querySelector(`input[name="test-answer"][value="${userAnswers[index].answer}"]`);
-            if (radio) radio.checked = true;
+            document.querySelectorAll('input[name="test-answer"]').forEach(r => {
+                if (r.value === userAnswers[index].answer) r.checked = true;
+            });
         } else {
             const input = document.getElementById('test-answer');
             if (input) input.value = userAnswers[index].answer;

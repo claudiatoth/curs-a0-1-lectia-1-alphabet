@@ -91,7 +91,7 @@ function buildEx2() {
         item.options.forEach((opt, i) => {
             optionsHTML += `
                 <div class="mc-option">
-                    <input type="radio" name="ex2-${item.id}" value="${opt}" id="ex2-${item.id}-${i}">
+                    <input type="radio" name="ex2-${item.id}" value="${opt.replace(/"/g, '&quot;')}" id="ex2-${item.id}-${i}">
                     <label for="ex2-${item.id}-${i}">${opt}</label>
                 </div>
             `;
@@ -157,7 +157,7 @@ function buildEx3() {
         item.options.forEach((opt, i) => {
             optionsHTML += `
                 <div class="mc-option">
-                    <input type="radio" name="ex3-${item.id}" value="${opt}" id="ex3-${item.id}-${i}">
+                    <input type="radio" name="ex3-${item.id}" value="${opt.replace(/"/g, '&quot;')}" id="ex3-${item.id}-${i}">
                     <label for="ex3-${item.id}-${i}">${opt}</label>
                 </div>
             `;
