@@ -1,6 +1,6 @@
 // ============================================
 // FLASHCARDS - DAS DEUTSCHE ALPHABET
-// Claudia Toth · A0.1 · Lecția 1
+// Claudia Toth · A0 — Fonetică · Lecția 1
 // 26 litere + 4 Sonderzeichen + 2 verbe = 32 carduri
 // ============================================
 

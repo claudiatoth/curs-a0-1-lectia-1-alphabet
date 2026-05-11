@@ -1,6 +1,6 @@
 // ============================================
 // TEST FINAL - DAS DEUTSCHE ALPHABET
-// Claudia Toth · A0.1 · Lecția 1 · 15 întrebări mixte
+// Claudia Toth · A0 — Fonetică · Lecția 1 · 15 întrebări mixte
 // ============================================
 
 const finalTestData = [

@@ -1,6 +1,6 @@
 // ============================================
 // TEORIE - DAS DEUTSCHE ALPHABET
-// Claudia Toth · Curs A0.1 · Lecția 1 din 7
+// Claudia Toth · A0 — Fonetică · Lecția 1 din 7
 // ============================================
 
 const theoryHTML = `

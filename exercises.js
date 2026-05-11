@@ -1,6 +1,6 @@
 // ============================================
 // EXERCIȚII - DAS DEUTSCHE ALPHABET
-// Claudia Toth · A0.1 · Lecția 1 · 5 exerciții
+// Claudia Toth · A0 — Fonetică · Lecția 1 · 5 exerciții
 // ============================================
 
 // ============================================
