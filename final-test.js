@@ -2,6 +2,21 @@
 // TEST FINAL - DAS DEUTSCHE ALPHABET
 // Claudia Toth · A0 — Fonetică · Lecția 1 · 15 întrebări mixte
 // ============================================
+// Normalizare răspuns: acceptă AMBELE forme (cu/fără diacritice germane)
+// ß↔ss · ä↔ae · ö↔oe · ü↔ue · lowercase · trim · fără punctuație
+function normalizeAnswer(str) {
+    return (str || '')
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/ß/g, 'ss')
+        .replace(/ä/g, 'ae')
+        .replace(/ö/g, 'oe')
+        .replace(/ü/g, 'ue')
+        .replace(/\s+/g, ' ')
+        .replace(/[.,!?;:]/g, '');
+}
+
 
 const finalTestData = [
     // 5x recunoaștere pronunție literă
@@ -158,13 +173,13 @@ function checkCurrentQuestion() {
     if (q.type === 'multiple') {
         isCorrect = userAnswer.toLowerCase() === q.correct.toLowerCase();
     } else if (q.type === 'spell') {
-        const norm = userAnswer.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
+        const norm = normalizeAnswer(userAnswer);
         isCorrect = q.accept.some(a => {
             const aNorm = a.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
             return aNorm === norm;
         });
     } else {
-        const userAnswerNorm = userAnswer.toLowerCase().replace(/\s+/g, ' ');
+        const userAnswerNorm = normalizeAnswer(userAnswer);
         isCorrect = q.accept.some(a => {
             const aNorm = a.toLowerCase().replace(/\s+/g, ' ');
             return aNorm === userAnswerNorm;

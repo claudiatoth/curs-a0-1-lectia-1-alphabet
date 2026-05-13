@@ -2,6 +2,21 @@
 // EXERCIȚII - DAS DEUTSCHE ALPHABET
 // Claudia Toth · A0 — Fonetică · Lecția 1 · 5 exerciții
 // ============================================
+// Normalizare răspuns: acceptă AMBELE forme (cu/fără diacritice germane)
+// ß↔ss · ä↔ae · ö↔oe · ü↔ue · lowercase · trim · fără punctuație
+function normalizeAnswer(str) {
+    return (str || '')
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/ß/g, 'ss')
+        .replace(/ä/g, 'ae')
+        .replace(/ö/g, 'oe')
+        .replace(/ü/g, 'ue')
+        .replace(/\s+/g, ' ')
+        .replace(/[.,!?;:]/g, '');
+}
+
 
 // ============================================
 // EXERCIȚIUL 1: Completează literele lipsă din alfabet
@@ -47,7 +62,7 @@ function checkEx1() {
     ex1Data.forEach(item => {
         const input = document.getElementById(`ex1-${item.id}`);
         const feedback = document.getElementById(`ex1-f${item.id}`);
-        const userAnswer = (input.value || '').trim().toLowerCase();
+        const userAnswer = normalizeAnswer(input.value);
         const expected = item.missing.toLowerCase();
         const accept = [expected];
         if (expected === 'ö') accept.push('oe');
@@ -307,8 +322,8 @@ function checkEx5() {
     ex5Data.forEach(item => {
         const input = document.getElementById(`ex5-${item.id}`);
         const feedback = document.getElementById(`ex5-f${item.id}`);
-        const userAnswer = (input.value || '').trim().toLowerCase();
-        if (item.accept.some(a => a.toLowerCase() === userAnswer)) {
+        const userAnswer = normalizeAnswer(input.value);
+        if (item.accept.some(a => normalizeAnswer(a) === userAnswer)) {
             feedback.className = 'feedback correct';
             feedback.textContent = `Corect: ${item.correct}`;
             correct++;

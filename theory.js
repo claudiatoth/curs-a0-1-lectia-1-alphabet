@@ -24,6 +24,18 @@ const theoryHTML = `
                 <p style="margin-top: 8px;">În tabelul de mai jos vezi: <strong>litera</strong> · <strong>cum se citește numele literei</strong> (cum o pronunți când spui pe litere) · <strong>simbolul fonetic IPA</strong>.</p>
             </div>
 
+            <div class="theory-box" style="background: #fffbeb; border-left: 4px solid #f59e0b; margin-bottom: 14px;">
+                <h4>💡 Înainte să începem — Diacritice germane fără tastatură germană</h4>
+                <p>„Nu ai tastatură germană? <strong>Niciun stres!</strong> La toate exercițiile poți scrie:</p>
+                <ul style="margin: 6px 0 4px 18px;">
+                    <li><code style="background:#fff;padding:1px 5px;border-radius:3px;">ss</code> în loc de <code style="background:#fff;padding:1px 5px;border-radius:3px;">ß</code> &nbsp;→&nbsp; <em>„heisst" = „heißt"</em></li>
+                    <li><code style="background:#fff;padding:1px 5px;border-radius:3px;">ae</code> în loc de <code style="background:#fff;padding:1px 5px;border-radius:3px;">ä</code> &nbsp;→&nbsp; <em>„Rumaenien" = „Rumänien"</em></li>
+                    <li><code style="background:#fff;padding:1px 5px;border-radius:3px;">oe</code> în loc de <code style="background:#fff;padding:1px 5px;border-radius:3px;">ö</code> &nbsp;→&nbsp; <em>„schoen" = „schön"</em></li>
+                    <li><code style="background:#fff;padding:1px 5px;border-radius:3px;">ue</code> în loc de <code style="background:#fff;padding:1px 5px;border-radius:3px;">ü</code> &nbsp;→&nbsp; <em>„gruessen" = „grüßen"</em></li>
+                </ul>
+                <p>Sistemul acceptă <strong>ambele forme</strong> automat. Eu așa am început — fără tastatură germană! E o convenție oficială folosită și de germani când scriu fără diacritice."</p>
+            </div>
+
             <table class="theory-table">
                 <thead><tr><th>Litera</th><th>Numele literei</th><th>IPA</th><th>Litera</th><th>Numele literei</th><th>IPA</th></tr></thead>
                 <tbody>
