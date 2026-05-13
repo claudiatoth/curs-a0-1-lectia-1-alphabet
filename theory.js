@@ -91,7 +91,13 @@ const theoryHTML = `
                 <h4>💡 Bun de știut despre ß</h4>
                 <ul>
                     <li><strong>ß</strong> apare doar la <u>literele mici</u> — NU există majusculă uzuală</li>
-                    <li><strong>ß</strong> înlocuiește un <strong>„ss"</strong> după o vocală lungă sau diftong: <em>die Straße</em>, <em>weiß</em>, <em>groß</em></li>
+                    <li><strong>ß</strong> înlocuiește un <strong>„ss"</strong> după:
+                        <ul style="margin-top: 4px;">
+                            <li>o <strong>vocală lungă</strong> — <em>die Straße</em> (a lung), <em>groß</em> (o lung), <em>der Gruß</em> (u lung)</li>
+                            <li>un <strong>diftong</strong> (ei, ai, au, eu, äu) — <em>weiß</em> (ei), <em>außen</em> (au), <em>heißen</em> (ei)</li>
+                        </ul>
+                        După o <strong>vocală scurtă</strong>, se scrie <strong>„ss"</strong> (NU ß): <em>der Fluss</em>, <em>das Schloss</em>, <em>küssen</em>.
+                    </li>
                     <li>Dacă tastatura ta nu are ß, poți scrie <strong>„ss"</strong> — toți germanii vor înțelege</li>
                     <li>Umlautele se pot scrie și ca: <strong>ä → ae</strong>, <strong>ö → oe</strong>, <strong>ü → ue</strong> (de exemplu pe tastaturi engleze)</li>
                 </ul>
