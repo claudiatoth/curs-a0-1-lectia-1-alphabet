@@ -255,12 +255,12 @@ const theoryHTML = `
             <table class="theory-table">
                 <thead><tr><th>Pronume</th><th>heißen<br><span style="font-weight: normal; color: rgba(255,255,255,0.85);">a se numi</span></th><th>buchstabieren<br><span style="font-weight: normal; color: rgba(255,255,255,0.85);">a spune pe litere</span></th></tr></thead>
                 <tbody>
-                    <tr><td><strong>ich</strong> <span class="ro-translation">eu</span></td><td><span class="verb">heiße</span></td><td><span class="verb">buchstabiere</span></td></tr>
-                    <tr><td><strong>du</strong> <span class="ro-translation">tu</span></td><td><span class="verb">heißt</span></td><td><span class="verb">buchstabierst</span></td></tr>
-                    <tr><td><strong>er / sie / es</strong> <span class="ro-translation">el / ea</span></td><td><span class="verb">heißt</span></td><td><span class="verb">buchstabiert</span></td></tr>
-                    <tr><td><strong>wir</strong> <span class="ro-translation">noi</span></td><td><span class="verb">heißen</span></td><td><span class="verb">buchstabieren</span></td></tr>
-                    <tr><td><strong>ihr</strong> <span class="ro-translation">voi</span></td><td><span class="verb">heißt</span></td><td><span class="verb">buchstabiert</span></td></tr>
-                    <tr><td><strong>sie / Sie</strong> <span class="ro-translation">ei, ele / Dvs.</span></td><td><span class="verb">heißen</span></td><td><span class="verb">buchstabieren</span></td></tr>
+                    <tr><td><strong>ich</strong> <span class="ro-translation">eu</span></td><td><span class="verb">heiße</span><br><span class="ro-translation">mă numesc</span></td><td><span class="verb">buchstabiere</span><br><span class="ro-translation">spun pe litere</span></td></tr>
+                    <tr><td><strong>du</strong> <span class="ro-translation">tu</span></td><td><span class="verb">heißt</span><br><span class="ro-translation">te numești</span></td><td><span class="verb">buchstabierst</span><br><span class="ro-translation">spui pe litere</span></td></tr>
+                    <tr><td><strong>er / sie / es</strong> <span class="ro-translation">el / ea</span></td><td><span class="verb">heißt</span><br><span class="ro-translation">se numește</span></td><td><span class="verb">buchstabiert</span><br><span class="ro-translation">spune pe litere</span></td></tr>
+                    <tr><td><strong>wir</strong> <span class="ro-translation">noi</span></td><td><span class="verb">heißen</span><br><span class="ro-translation">ne numim</span></td><td><span class="verb">buchstabieren</span><br><span class="ro-translation">spunem pe litere</span></td></tr>
+                    <tr><td><strong>ihr</strong> <span class="ro-translation">voi</span></td><td><span class="verb">heißt</span><br><span class="ro-translation">vă numiți</span></td><td><span class="verb">buchstabiert</span><br><span class="ro-translation">spuneți pe litere</span></td></tr>
+                    <tr><td><strong>sie / Sie</strong> <span class="ro-translation">ei, ele / Dvs.</span></td><td><span class="verb">heißen</span><br><span class="ro-translation">se numesc / vă numiți</span></td><td><span class="verb">buchstabieren</span><br><span class="ro-translation">spun pe litere / spuneți pe litere</span></td></tr>
                 </tbody>
             </table>
 
