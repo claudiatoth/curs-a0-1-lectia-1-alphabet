@@ -173,11 +173,10 @@ function checkCurrentQuestion() {
     if (q.type === 'multiple') {
         isCorrect = userAnswer.toLowerCase() === q.correct.toLowerCase();
     } else if (q.type === 'spell') {
-        const norm = normalizeAnswer(userAnswer);
-        isCorrect = q.accept.some(a => {
-            const aNorm = a.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
-            return aNorm === norm;
-        });
+        // La buchstabieren ignorăm separatorii (spațiu, dash, punct) pe AMBELE părți
+        const stripSep = s => s.toLowerCase().replace(/[\s\-\.—–·]/g, '').replace(/ß/g, 'ss').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue');
+        const norm = stripSep(userAnswer);
+        isCorrect = q.accept.some(a => stripSep(a) === norm) || stripSep(q.correct) === norm || stripSep(q.word) === norm;
     } else {
         const userAnswerNorm = normalizeAnswer(userAnswer);
         isCorrect = q.accept.some(a => {
