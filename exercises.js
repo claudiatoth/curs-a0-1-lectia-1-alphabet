@@ -13,6 +13,10 @@ function normalizeAnswer(str) {
         .replace(/ä/g, 'ae')
         .replace(/ö/g, 'oe')
         .replace(/ü/g, 'ue')
+        .replace(/[ăâ]/g, 'a')
+        .replace(/î/g, 'i')
+        .replace(/[șş]/g, 's')
+        .replace(/[țţ]/g, 't')
         .replace(/\s+/g, ' ')
         .replace(/[.,!?;:]/g, '');
 }
