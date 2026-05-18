@@ -24,7 +24,8 @@
             <li><a href="#ex4" onclick="openSection(4)">Ex. 4</a></li>
             <li><a href="#ex5" onclick="openSection(5)">Ex. 5</a></li>
             <li><a href="#flashcards" onclick="openSection(6)">📇 Flashcards</a></li>
-            <li><a href="#final-test" onclick="openSection(7)">🎯 Test Final</a></li>
+            <li><a href="#verbe" onclick="openSection(7)">🔁 Verbe</a></li>
+            <li><a href="#final-test" onclick="openSection(8)">🎯 Test Final</a></li>
             <li><a href="alphabet.pdf" download>📄 PDF</a></li>
         </ul>
     </nav>
@@ -132,12 +133,22 @@
                 </div>
             </div>
 
-            <div class="section" id="final-test">
+            <div class="section" id="verbe">
                 <div class="section-header" onclick="toggleMainSection(7)">
-                    <h3>ʚଓ 🎯 Test Final - Testează-ți cunoștințele!</h3>
+                    <h3>ʚଓ 🔁 Verb-Konjugation - Präsens (prezent)</h3>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="section-content" id="main-section-7">
+                    <div id="verbs-container"></div>
+                </div>
+            </div>
+
+            <div class="section" id="final-test">
+                <div class="section-header" onclick="toggleMainSection(8)">
+                    <h3>ʚଓ 🎯 Test Final - Testează-ți cunoștințele!</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="section-content" id="main-section-8">
                     <div id="final-test-container"></div>
                 </div>
             </div>
@@ -153,6 +164,7 @@
     <script src="theory.js"></script>
     <script src="exercises.js"></script>
     <script src="flashcards.js"></script>
+    <script src="verbs.js"></script>
     <script src="final-test.js"></script>
     <script src="main.js"></script>
 </body>
